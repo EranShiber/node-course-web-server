@@ -17,8 +17,12 @@ app.use((req, res, next) => {
     })
     next();
 })
-app.use((req, res, next) => {
-    res.render('maintenance.hbs')
+// app.use((req, res, next) => {
+//     res.render('maintenance.hbs')
+// })
+
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs', {pageTitle: 'PROJECTS:'})
 })
 
 app.get('/about', (req, res) => {
